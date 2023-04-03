@@ -22,7 +22,7 @@ class Chroma:
     def load(file, fix_imports=True, encoding="ASCII", errors="strict"):
         compressed_data = file.read()
         uncompressed_data = zlib.decompress(compressed_data)
-        return pickle.loads(uncompressed_data, fix_imports=fix_imports, encoding=encoding, errors=errors)
+        return pickle.load(uncompressed_data, fix_imports=fix_imports, encoding=encoding, errors=errors)
 
     # The remaining methods are added in Python 3.8
     @staticmethod
